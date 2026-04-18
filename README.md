@@ -10,6 +10,7 @@ Skills are markdown files that give Claude Code domain expertise. Instead of exp
 
 | Skill | Description |
 |-------|-------------|
+| [sync-context](skills/sync-context/) | End-of-session context sync. Reviews what was learned and persists it into project context files so the next session starts up to date. |
 | [skill-tutor](skills/skill-tutor/) | Personal AI tutor with spaced repetition. Creates tutorials using YOUR projects, tracks learning progress, quizzes you at optimal intervals. |
 | [optimize-prompt](skills/optimize-prompt/) | Evolves prompts using genetic algorithms. Give it test cases, it finds the prompt that works. |
 | [deploy-agentcore](skills/deploy-agentcore/) | Deploy Python agents to AWS Bedrock AgentCore. Serverless hosting with memory, auth, and observability. |
