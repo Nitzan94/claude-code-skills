@@ -1,0 +1,17 @@
+{
+  "_comment": "Merge this entry into the hooks.PreToolUse array in your ~/.claude/settings.json. If you don't have one yet, the structure below is a complete minimal example.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Agent|Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ~/.claude/hooks/pre-tool-use/agent-model-check.py",
+            "timeout": 5000
+          }
+        ]
+      }
+    ]
+  }
+}

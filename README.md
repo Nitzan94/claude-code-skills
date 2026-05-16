@@ -15,6 +15,15 @@ Skills are markdown files that give Claude Code domain expertise. Instead of exp
 | [optimize-prompt](skills/optimize-prompt/) | Evolves prompts using genetic algorithms. Give it test cases, it finds the prompt that works. |
 | [deploy-agentcore](skills/deploy-agentcore/) | Deploy Python agents to AWS Bedrock AgentCore. Serverless hosting with memory, auth, and observability. |
 | [chrome-extension](skills/chrome-extension/) | Build Chrome extensions with Manifest V3. Scaffolding, patterns, debugging. |
+| [model-audit](skills/model-audit/) | Reads the dispatch log written by the `model-routing` hook and shows whether subagents are running on the model tiers you intended. Pairs with `hooks/model-routing`. |
+
+## Hooks
+
+Mechanical guardrails that run in the Claude Code harness — not skills, but artifacts you wire into `~/.claude/settings.json`.
+
+| Hook | Description |
+|------|-------------|
+| [model-routing](hooks/model-routing/) | PreToolUse hook that blocks `Agent`/`Task` dispatches without an explicit `model` parameter. Kills the silent default where subagents inherit the parent's model (almost always Opus). Ships with the rule, the hook script, an audit script, and a settings snippet. Pairs with the `model-audit` skill. |
 
 ## Installation
 
